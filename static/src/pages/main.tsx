@@ -1,4 +1,13 @@
-import App from '../components/vite-default/App'
-import { renderPage } from "../components/utils/utils"
+import { MantineProvider, Text, Title } from "@mantine/core";
+import { Login } from "../components/Auth";
+import { renderPage } from "../components/utils/utils";
 
-renderPage(<App />)
+export default function App() {
+  return (
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <Login />
+    </MantineProvider>
+  );
+}
+
+renderPage(<App />, false);
